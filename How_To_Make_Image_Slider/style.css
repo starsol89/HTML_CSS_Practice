@@ -1,0 +1,67 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.banner3
+{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+img
+{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoom-out 3s linear infinite;
+}
+
+@keyframes zoom-out{
+    100%{
+        width: 100%;
+    }
+}
+
+.text-box
+{
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    color: #fff;
+}
+
+.text-box h1
+{
+    margin-bottom: 40px;
+}
+
+.text-box p
+{
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 80px;
+}
+
+.text-box span
+{
+    background: blue;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+}
+
+.banner3
+{
+    animation: slider3 12s linear infinite;
+}
