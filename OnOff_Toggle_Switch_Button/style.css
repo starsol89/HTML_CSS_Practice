@@ -1,142 +1,127 @@
-body,html 
-{
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
 
-body
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
-.bg
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ef5350;
-    z-index: -1;
-    transition: background 0.3s linear;
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ef5350;
+  z-index: -1;
+  transition: background 0.3s linear;
 }
 
-input
-{
-    display: none;
+input {
+  display: none;
 }
 
-.toggle
-{
-    width: 100px;
-    height: 50px;
-    background: white;
-    border-radius: 35px;
-    position: relative;
-    cursor: pointer;
+.toggle {
+  width: 100px;
+  height: 50px;
+  background: white;
+  border-radius: 35px;
+  position: relative;
+  cursor: pointer;
 }
 
-.toggle-switch:before
-{
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ef5350;
-    bottom: 5px;
-    left: 5px;
-    transition: 0.3s ease-in-out;
+.toggle-switch:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ef5350;
+  bottom: 5px;
+  left: 5px;
+  transition: 0.3s ease-in-out;
 }
 
-.toggle-switch:after
-{
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ef5350;
-    bottom: 5px;
-    left: 5px;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-    transform: scale(0);
+.toggle-switch:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ef5350;
+  bottom: 5px;
+  left: 5px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(0);
 }
 
-.x-shape:before
-{
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 5px;
-    background-color: white;
-    transform: rotate(-45deg) scale(1);
-    left: 22px;
-    bottom: 10px;
-    transition: 0.3s cubic-bezier(1,0,0,1) 0.3s;
+.x-shape:before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background-color: white;
+  transform: rotate(-45deg) scale(1);
+  left: 22px;
+  bottom: 10px;
+  transition: 0.3s cubic-bezier(1, 0, 0, 1) 0.3s;
 }
 
-.x-shape:after
-{
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 5px;
-    background-color: white;
-    transform: rotate(45deg) scale(1);
-    left: 22px;
-    bottom: 10px;
-    transition: 0.3s cubic-bezier(1,0,0,1) 0.3s;
+.x-shape:after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background-color: white;
+  transform: rotate(45deg) scale(1);
+  left: 22px;
+  bottom: 10px;
+  transition: 0.3s cubic-bezier(1, 0, 0, 1) 0.3s;
 }
 
-.v-shape:before
-{
-    content: "";
-    position: absolute;
-    border-right: 5px solid white;
-    border-bottom: 5px solid white;
-    transform: rotate(45deg) scale(0);
-    transform-origin: center bottom;
-    left: 59px;
-    bottom: 18px;
-    height: 20px;
-    width: 10px;
-    transition: 0.3s cubic-bezier(1,0,0,1) 0.3s;
+.v-shape:before {
+  content: "";
+  position: absolute;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  transform: rotate(45deg) scale(0);
+  transform-origin: center bottom;
+  left: 59px;
+  bottom: 18px;
+  height: 20px;
+  width: 10px;
+  transition: 0.3s cubic-bezier(1, 0, 0, 1) 0.3s;
 }
 
-input[type=checkbox]:checked + .toggle-switch:before
-{
-    left: 55px;
-    transform: scale(0);
-    background-color: #183e84;
+input[type="checkbox"]:checked + .toggle-switch:before {
+  left: 55px;
+  transform: scale(0);
+  background-color: #183e84;
 }
 
-input[type=checkbox]:checked + .toggle-switch:after
-{
-    left: 55px;
-    transform: scale(1);
-    background-color: #183e84;
+input[type="checkbox"]:checked + .toggle-switch:after {
+  left: 55px;
+  transform: scale(1);
+  background-color: #183e84;
 }
 
-input[type=checkbox]:checked ~ .bg
-{
-    background-color: #183e84;
+input[type="checkbox"]:checked ~ .bg {
+  background-color: #183e84;
 }
 
-input[type=checkbox]:checked ~ .x-shape:before
-{
-    transform: rotate(-45deg) scale(0);
+input[type="checkbox"]:checked ~ .x-shape:before {
+  transform: rotate(-45deg) scale(0);
 }
 
-input[type=checkbox]:checked ~ .x-shape:after
-{
-    transform: rotate(45deg) scale(0);
+input[type="checkbox"]:checked ~ .x-shape:after {
+  transform: rotate(45deg) scale(0);
 }
 
-input[type=checkbox]:checked ~ .v-shape:before
-{
-    transform: rotate(45deg) scale(1);
+input[type="checkbox"]:checked ~ .v-shape:before {
+  transform: rotate(45deg) scale(1);
 }
