@@ -1,21 +1,21 @@
-.button{
-    display: inline-block;
-    border-radius: 3px;
-    padding: 7px 12px;
-    border: 1px solid #D5D5D5;
-    background-image: linear-gradient(#EEE, #DDD);
-    font: 700 13px/18px Helvetica, arial;
+.button {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 7px 12px;
+  border: 1px solid #d5d5d5;
+  background-image: linear-gradient(#eee, #ddd);
+  font: 700 13px/18px Helvetica, arial;
 }
-.button-state-success{
-    display: inline-block;
-    border-radius: 5px;
-    padding: 10px 12px;
-    color: #FFF;
-    background: #569E3D linear-gradient(#569E3D, #569E3D) repeat-x;
-    border-color: #4A993E;
+.button-state-success {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #569e3d linear-gradient(#569e3d, #569e3d) repeat-x;
+  border-color: #4a993e;
 }
-.button-state-danger{
-    border-radius: 3px;
-    padding: 7px 12px;
-    color: #900;
+.button-state-danger {
+  border-radius: 3px;
+  padding: 7px 12px;
+  color: #900;
 }
