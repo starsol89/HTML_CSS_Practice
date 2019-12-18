@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Foods</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="navbar">
+        <a href="#" class="logo">Green<span>Foods</span></a>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <span class="menuIcon" onclick="menuToggle()"></span>
+      </header>
+      <div class="content">
+        <div class="bannerText" id="slideshowText">
+          <div class="active">
+            <h2>
+              EAT Healthy<br />
+              Stay Healthy
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div>
+            <h2>
+              Eat Your<br />
+              Veggies
+            </h2>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div>
+            <h2>
+              Good Food<br />
+              Good Mood
+            </h2>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <a href="#">Read More</a>
+          </div>
+        </div>
+        <div class="bannerImg" id="slideshow">
+          <img src="img1.png" class="active" />
+          <img src="img2.png" />
+          <img src="img3.png" />
+        </div>
+      </div>
+      <div class="icons">
+        <ul class="sci">
+          <li>
+            <a href="#"><img src="facebook.png"/></a>
+          </li>
+          <li>
+            <a href="#"><img src="twitter.png"/></a>
+          </li>
+          <li>
+            <a href="#"><img src="instagram.png"/></a>
+          </li>
+        </ul>
+        <ul class="controls">
+          <li>
+            <a><img src="left.png" onclick="prevSlide();prevSlideText();"/></a>
+          </li>
+          <li>
+            <a><img src="right.png" onclick="nextSlide();nextSlideText();"/></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var slideShow = document.getElementById("slideshow");
+      var slides = slideshow.getElementsByTagName("img");
+      var index = 0;
+      function nextSlide() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+      }
+      function prevSlide() {
+        slides[index].classList.remove("active");
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add("active");
+      }
+
+      var slideshowText = document.getElementById("slideshowText");
+      var slidesText = slideshowText.getElementsByTagName("div");
+      var i = 0;
+      function nextSlideText() {
+        slidesText[i].classList.remove("active");
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add("active");
+      }
+      function prevSlideText() {
+        slidesText[i].classList.remove("active");
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add("active");
+      }
+
+      function menuToggle() {
+        var nav = document.getElementById("navbar");
+        nav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
